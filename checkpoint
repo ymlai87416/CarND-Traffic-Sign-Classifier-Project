@@ -1,0 +1,2 @@
+model_checkpoint_path: "mscnn"
+all_model_checkpoint_paths: "mscnn"
