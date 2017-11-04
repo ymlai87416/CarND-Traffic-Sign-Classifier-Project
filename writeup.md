@@ -219,6 +219,10 @@ Explanations:
     * For number of epochs, I plot a graph of training accuracy vs validation accuracy. For 30 epochs, I do not see the model to overfit the training set, and I think that 10-20 minutes is worth for training such a network.
     * For dropout, I spent the time to evaluate different parameter, plot the training accuracy and validation accuracy using different dropout ratio, and find a rate which I think it is a bias-variance tradeoff.
     * For batch size, I used batch size=2048 at the beginning, but the infrequent update of weights compare to batch size=128 make the training slow.
+
+![alt text][lenet_train_30]
+![alt text][mscnn_train_30]
+    
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
     * Convolution layer is the state-of-art technique to deal with computer vision problem, it is rooted from how the human brain works when seeing an image. It learns the features automatically without humans to discover the features and hardcode it to the program, which requires time and effort, it can also enable a technique called transfer learning, which reuses the base layer of convolution network for another image classification problem.
     * Dropout layer help to create a successful model because it forces the neural network to learn multiple independent representations of the same data, which prevent the neurons from co-adapting too much with each other, which make overfitting unlikely to happen.
