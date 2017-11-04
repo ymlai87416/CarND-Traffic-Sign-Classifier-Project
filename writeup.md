@@ -152,7 +152,7 @@ My final LeNet model consisted of the following layers:
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 ##### LeNet model
-To train the  model, I first search for a learning rate which suitable, the default learning rate 0.001 is quite good.
+To train the  model, I use the Adam optimizer provided by Tensorflow, I search for a suitable learning rate, the default learning rate 0.001 is quite good.
 
 For the batch size, I choose 128, because it can reduce the memory footprint and also allow frequent updates to weights compare to the big batch size like 2048, and hence can often reach accuracy > 0.8 at the 1st epoch.
 
@@ -173,7 +173,7 @@ In this project, I have chosen 0.3 as my dropout rate for the LeNet model.
 For the number of epochs used in training the model, I use 30 epochs. Although the time is longer, I can use a smaller learning rate and a bigger dropout rate to aims for a better model.
 
 ##### Multi-scale CNN
-To train the  model, I first search for a learning rate which suitable, the learning rate I choose is 0.3 with epsilon=1.
+To train the  model, I use the Adam optimizer provided by Tensorflow, I search for a suitable learning rate, the learning rate I choose is 0.3 with epsilon=1.
 
 For the batch size, I choose 128, reason same as above.
 
@@ -282,7 +282,7 @@ For the third image, the model is sure that this is a "No passing for vehicles o
 
 ![alt text][top5_3] 
 
-For the third image, the model is pretty sure that this is a Pedestrians sign, and the image does contain a Pedestrians sign. The top five softmax probabilities were
+For the fourth image, the model is pretty sure that this is a Pedestrians sign, and the image does contain a Pedestrians sign. The top five softmax probabilities were
 
 ![alt text][top5_4] 
 
