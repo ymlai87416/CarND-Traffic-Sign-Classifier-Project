@@ -196,14 +196,14 @@ For the number of epochs used in training, I use 30 epochs. The same reason abov
 My final model results were:
 
 LeNet
-* training set accuracy of 98.5%
+* training set accuracy of 98.0%
 * validation set accuracy of 97.5%
-* test set accuracy of 94.9%
+* test set accuracy of 95.0%
 
 Multi-scale CNN
 * training set accuracy of 99.7%
-* validation set accuracy of 98.3%
-* test set accuracy of 96.3%
+* validation set accuracy of 98.8%
+* test set accuracy of 96.2%
 
 Explanations:
 * What was the first architecture that was tried and why was it chosen?
@@ -233,7 +233,7 @@ If a well known architecture was chosen:
 * Why did you believe it would be relevant to the traffic sign application?
     * This network is used as a submission to a German traffic sign competition GTSRB. This is the most relevant network I can find for this application. 
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-    * My reimplementation of the model is near to what the model in the paper has claimed  98.97% vs 96.3%. I think this network is working well. One problem is that the error for "Pedestrians" is too high, failure rate reaches 50%, which is not acceptable.
+    * My reimplementation of the model is near to what the model in the paper has claimed  98.97% vs 96.2%. I think this network is working well. One problem is that the error for "Pedestrians" is too high, failure rate reaches 50%, which is not acceptable.
 
 #### Confusion matrix for the proposed models
 Both models achieve over 93% accuracy, and correctly identify most of the traffic signs, except one, the "Pedestrians" traffic sign, both having around 50% of accuracy rate. Further study must be conducted to find out why the sign is likely to be wrongly classified. 
@@ -262,11 +262,11 @@ Here are the results of the prediction made by Multi-scale CNN model:
 | Bicycles crossing     | Bicycles crossing   							| 
 | Go straight or right 	| Go straight or right 							|
 | No passing for vehicles over 3.5 metric tons| No passing for vehicles over 3.5 metric tons|
-| Pedestrians	      	| Pedestrians       					 		|
+| Pedestrians	      	| Road work       					 		|
 | Priority road     	| Priority road                                 |
 
 
-The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares to the accuracy on the test set of 96.3%
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares to the accuracy on the test set of 96.3%
 
 #### 3. Describe how certain the model is when predicting on each of the 5 new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -282,7 +282,7 @@ For the third image, the model is sure that this is a "No passing for vehicles o
 
 ![alt text][top5_3] 
 
-For the fourth image, the model is pretty sure that this is a Pedestrians sign, and the image does contain a Pedestrians sign. The top five softmax probabilities were
+For the fourth image, the model is wrongly predict the traffic sign as "Road work" sign, but the image does contain a Pedestrians sign. The top five softmax probabilities were
 
 ![alt text][top5_4] 
 
